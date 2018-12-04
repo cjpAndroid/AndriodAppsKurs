@@ -32,44 +32,40 @@ public class DamitIchNichtEinroste {
 //				e.printStackTrace();
 //			}
 //		}
-		
-		
-		
-		
+
 		LocalDateTime date = LocalDateTime.now();
-	    File file = new File("messungenOutText.txt");
-	    FileWriter fr = null;
-	    BufferedWriter br = null;
-	   // String dataWithNewLine= date.toString()+System.getProperty("line.separator");
-	    try{
-	        fr = new FileWriter(file);
-	        br = new BufferedWriter(fr);
-	        for(int i = noOfLines; i>0; i--){ 
-	        Thread.sleep((long) (1000+Math.random()*3000));
-	        LocalDateTime dateNachher = LocalDateTime.now();
-	        Duration duration = Duration.between(date, dateNachher);
-	        long durationNanoSeconds = duration.toNanos();
-	        
-	        	//
-	        	String dataWithNewLine= durationNanoSeconds +System.getProperty("line.separator");
-	            br.write(dataWithNewLine);
-	            
-	        }
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }finally{
-	        try {
-	            br.close();
-	            fr.close();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
 		
+		File file = new File("messungenOutText.txt");
+		FileWriter fr = null;
+		BufferedWriter br = null;
+		// String dataWithNewLine= date.toString()+System.getProperty("line.separator");
+		try {
+			fr = new FileWriter(file);
+			br = new BufferedWriter(fr);
+
+			for (int i = noOfLines; i > 0; i--) {
+				
+				Thread.sleep((long) (1000 + Math.random() * 3000));
+				
+				LocalDateTime dateNachher = LocalDateTime.now();
+				
+				Duration duration = Duration.between(date, dateNachher);
+				long durationNanoSeconds = duration.toNanos();
+				String dataWithNewLine = durationNanoSeconds + System.getProperty("line.separator");
+				br.write(dataWithNewLine);
+
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				br.close();
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 }
-
-
-
-
