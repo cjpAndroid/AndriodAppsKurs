@@ -34,6 +34,7 @@ public class DamitIchNichtEinroste {
 //		}
 //weiter mit Repository
 		LocalDateTime date = LocalDateTime.now();
+		System.out.println("hallo Olaa");
 		
 		File file = new File("messungenOutText.txt");
 		FileWriter fr = null;
