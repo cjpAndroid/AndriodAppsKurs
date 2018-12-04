@@ -36,7 +36,7 @@ public class DamitIchNichtEinroste {
 		LocalDateTime date = LocalDateTime.now();
 		System.out.println("hallo Olaa");
 		System.out.println("hallo Olaa");
-		System.out.println("Halloooo Olaa");
+		
 		
 		
 		
