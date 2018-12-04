@@ -47,8 +47,7 @@ public class WindowOnTheTop extends JFrame {
         panelUnten.add(startKnopf);
         panelUnten.add(endKnopf);
         
-        System.out.println("blalba2");
-
+  
         
       //Creating the MenuBar and adding components
         JMenuBar mb = new JMenuBar();
